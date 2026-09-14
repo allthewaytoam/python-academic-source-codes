@@ -17,9 +17,20 @@ def register(id, name, age, gender, phone, on_spot_mentioned_problem):
     return True
 
 
+def remove_patient(pid):
+    for p in patients:
+        if p["id"] == pid:
+            patients.remove(p)
+            print(f"Patient ID \'{pid}\' removed successfully.")
+            return True
+
+    print(f"Patient ID \'{pid}\' doesn't exist.")
+    return False
+
+
 def display_id(id):
     if id not in patients:
-        print(f"Patient ID {id} doesn't exist.")
+        print(f"Patient ID \'{id}\' doesn't exist.")
         return False
 
     print(f"Details of Patient ID {id}:")
