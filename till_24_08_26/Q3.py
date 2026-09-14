@@ -1,14 +1,15 @@
-import numpy as np
+from scipy import linalg
 
-M = np.array([[1, 2, 3, 4],
-              [5, 6, 7, 8],
-              [9, 10, 11, 12],
-              [13, 14, 15, 16]], dtype=float)
+M = [[1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]]
 
 print("M =\n", M)
 
-M_T = M.T
+M_T = [list(row) for row in zip(*M)]
 print("\nTranspose of M =\n", M_T)
 
-rank_M = np.linalg.matrix_rank(M)
+singular_values = linalg.svdvals(M)
+rank_M = sum(value > 1e-10 for value in singular_values)
 print("\nRank of M =", rank_M)
