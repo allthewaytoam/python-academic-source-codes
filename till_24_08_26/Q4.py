@@ -1,10 +1,9 @@
-import numpy as np
 from scipy import linalg
 
-Q = np.array([[4, 1, 2, 0],
-              [1, 3, 0, 1],
-              [2, 0, 5, 2],
-              [0, 1, 2, 6]], dtype=float)
+Q = [[4, 1, 2, 0],
+     [1, 3, 0, 1],
+     [2, 0, 5, 2],
+     [0, 1, 2, 6]]
 
 print("Q =\n", Q)
 

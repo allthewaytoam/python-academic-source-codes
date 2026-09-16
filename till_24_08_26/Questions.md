@@ -5,7 +5,7 @@
 ## Python
 ===========
 
-### Assignment - 1
+### Set - 1
 =====================
 1. calculator: +-/* with 2 no
 2. even odd check
