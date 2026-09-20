@@ -5,5 +5,5 @@ venv/
 .ipynb_checkpoints/
 .env
 *.log
-HMS_test/
+
 suggestions/
